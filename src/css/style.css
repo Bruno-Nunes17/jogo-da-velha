@@ -4,13 +4,34 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
-.placar{
+body{
+    overflow: hidden;
+}
+img{
+    height: 90%;
+    width: 90%;
+}
+a{
     display: flex;
-    justify-content: space-between;
-    height: 23px;
-    width: 500px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    background-color: black;
+    border-radius: 50%;
+    transition: ease-in-out 400ms;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: 5px;
+}
+a:focus{
+    transform: scale(0.9);
+
+}
+.aberto{
+    opacity: 1;
+    visibility: visible;
 }
 .menu{
     display: flex;
@@ -18,18 +39,14 @@
     align-items: center;
     flex-direction: column;
 }
-.main-bg{
-    background-image: url(../img/sun-tornado.svg);
-    background-position: center center;
-    background-size: cover;
-}
 .align-content{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .container{
-    height: calc(100vh - 100px);
+    height: 100vh;
     max-width: 1440px;
 }
 #jogo{
@@ -41,6 +58,7 @@
     grid-template-rows: repeat(3, 1fr);
     background-color: white;
     border-radius: 15px;
+    border: 1px solid black;
 }
 #jogo div{
     display: flex;
@@ -51,10 +69,19 @@
     cursor: pointer;
 }
 #jogo div:nth-last-of-type(3n+2){
-    border-left: 7px solid black;
-    border-right: 7px solid black;
+    border-left: 10px solid black;
+    border-right: 10px solid black;
 }
 #jogo div:nth-last-of-type(n+4):nth-last-of-type(-n+6){
-    border-top: 7px solid black;
-    border-bottom: 7px solid black;
+    border-top: 10px solid black;
+    border-bottom: 10px solid black;
+}
+@media (max-width: 500px){
+    #jogo{
+        height: 300px;
+        width: 300px;
+    }
+    #jogo div{
+        font-size: 60px;
+    }
 }
