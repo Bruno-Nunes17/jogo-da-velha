@@ -84,4 +84,10 @@ a:focus{
     #jogo div{
         font-size: 60px;
     }
+    .menu h1{
+        font-size: 1.5em;
+    }
+    a{
+        margin-top: 40px;
+    }
 }
